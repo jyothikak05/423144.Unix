@@ -1,0 +1,33 @@
+
+
+echo "==========================="
+echo "1. Time in 12-Hour Format:"
+date +"%r"
+
+echo "==========================="
+echo "2. Time in 24-Hour Format:"
+date +"%T"
+
+echo "==========================="
+echo "3. Current Date and Time:"
+date
+
+echo "==========================="
+echo "4. GOOD MORNING (Enlarged):"
+# Check if figlet is installed
+if command -v figlet &> /dev/null; then
+    figlet "GOOD MORNING"
+else
+    echo "figlet not found, using banner instead:"
+    banner "GOOD MORNING"
+fi
+
+echo "==========================="
+echo "5. Home Directory:"
+echo "$HOME"
+
+echo "==========================="
+echo "6. Creating 'SAMPLE' Directory in Home..."
+mkdir -p ~/SAMPLE
+echo "Directory created at: ~/SAMPLE"
+
