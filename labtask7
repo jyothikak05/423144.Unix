@@ -1,0 +1,8 @@
+git init
+
+git add sample.sh
+
+git commit -m "Added sample shell script"
+
+git push
+

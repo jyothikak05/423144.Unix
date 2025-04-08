@@ -1,0 +1,13 @@
+dpkg -l
+
+rpm -qa
+
+sud apt update
+
+apt search curl
+
+sudo apt purge cur
+
+apt-cache search web server
+
+sudo apt-get install apache2
