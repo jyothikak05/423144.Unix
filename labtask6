@@ -1,0 +1,13 @@
+tar -cvf scripts_collection.tar task1.sh task2.sh task3.sh
+
+tar -czvf unix_tasks.tar.gz labtasks/
+
+
+tar -xvf unix_tasks.tar
+
+tar -xzvf unix_tasks.tar.gz
+
+tar -tvf unix_tasks.tar
+
+tar -tzvf unix_tasks.tar.gz
+
