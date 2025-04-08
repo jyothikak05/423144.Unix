@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# 1. Check if a number is Even or Odd
+echo "1. Check Even or Odd"
+read -p "Enter a number: " num
+if (( num % 2 == 0 )); then
+    echo "$num is Even"
+else
+    echo "$num is Odd"
+fi
+
+echo "============================"
+
+# 2. Check if a year is Leap Year or not
+echo "2. Check Leap Year"
+read -p "Enter a year: " year
+if (( (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) )); then
+    echo "$year is a Leap Year"
+else
+    echo "$year is NOT a Leap Year"
+fi
+
+echo "============================"
+
+# 3. Find the factorial of a number
+echo "3. Factorial Calculation"
+read -p "Enter a number to find factorial: " n
+fact=1
+for (( i=1; i<=n; i++ ))
+do
+    fact=$((fact * i))
+done
+echo "Factorial of $n is $fact"
+
+echo "============================"
+
+# 4. Swap two integers
+echo "4. Swap Two Integers"
+read -p "Enter first number (a): " a
+read -p "Enter second number (b): " b
+echo "Before Swap: a = $a, b = $b"
+temp=$a
+a=$b
+b=$temp
+echo "After Swap: a = $a, b = $b"
+
+echo "============================"
+
+# 5. Compute GCD and LCM
+echo "5. GCD and LCM"
+read -p "Enter first number: " x
+read -p "Enter second number: " y
+
+# GCD using Euclidean algorithm
+a=$x
+b=$y
+while [ $b -ne 0 ]; do
+    temp=$b
+    b=$((a % b))
+    a=$temp
+done
+gcd=$a
+lcm=$(( (x * y) / gcd ))
+
+echo "GCD of $x and $y is: $gcd"
+echo "LCM of $x and $y is: $lcm"
+
+echo "============================"
+
+# 6. Print numbers from 1 to 10 using while loop
+echo "6. Numbers from 1 to 10"
+i=1
+while [ $i -le 10 ]
+do
+    echo "$i"
+    ((i++))
+done
+
