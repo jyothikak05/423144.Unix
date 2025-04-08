@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "====================================="
+echo "1. Files starting with the letter 'a':"
+ls -d a*
+
+echo "====================================="
+echo "2. Files with .txt extension:"
+ls -d *.txt
+
+echo "====================================="
+echo "3. Files with exactly 5 characters (no extension):"
+ls -d ????? 2>/dev/null
+
+echo "====================================="
+echo "4. Files starting with any letter between 'b' and 'e':"
+ls -d [b-e]*
+
+echo "====================================="
+echo "5. Files ending with .log where 2nd character is a number (e.g., a1.log):"
+ls -d ?[0-9].log 2>/dev/null
+
+echo "====================================="
+echo "6. Files starting with 'data' followed by exactly one character:"
+ls -d data? 2>/dev/null
+
